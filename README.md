@@ -14,4 +14,8 @@ Postup stažení a vložení do hry:
 6. Zobrazí se 4 záložky - HTML Layout, CSS Styling, Translation, Preview - vás budou zajímat jen první 2 (Translation je pro překlad do jiných jazyků a v Preview si můžete prohlédnout výsledný deník z kódu, který nyní nahrajete)
 7. Ze staženého **sheet_drd2.html** souboru zkopírujte kód do záložky HTML Layout a stejně tak z **sheet_drd2.css** zkopírujte kód do CSS Styling
 8. Klikněte na **Save Changes/Uložit změny** a můžete jít zpět a zapnout hru
-9. Když nyní vytvoříte v **Journal/Žurnálu** charakter a uložíte jej a pak si ho otevřete, v záložce Character sheet bude deník (toto platí pro každý charakter, který vytvoříte)
+9. Když nyní vytvoříte v **Journal/Žurnálu** charakter (dejte mu při vytváření práva na editaci svého deníku) a uložíte jej a pak si ho otevřete, v záložce Character sheet bude náš nový krásný deník (toto platí pro každý charakter, který vytvoříte)
+
+V případě nouze směle váhejte kontaktovat na Discordu uživatele Sami#7166, nejlépe na serveru níže zmíněném.
+
+Tímto bych vás chtěl všechny pozvat do naší Putyky na Discordu určenou pro komunitu kolem Dračího Doupěte 2 (link https://discord.gg/2d8uzJNx37), kde nápad na vytvoření deníku vzniknul.
