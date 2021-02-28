@@ -9,6 +9,10 @@
     background: url("https://raw.githubusercontent.com/samik027/Roll20-DRDII-character-sheet/main/drd2_pozadi.png") no-repeat;
 }
 
+svg {
+    font-family: "Courier New";
+}
+
 .sheet-character,
 .sheet-texts,
 .sheet-companions   {
