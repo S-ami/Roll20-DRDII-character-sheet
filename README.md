@@ -4,8 +4,8 @@ Deník postavy pro hru Dračí Doupě II, pro podrobnější informace o hře vi
 Postup stažení a vložení do hry:
 
 1. Stažení souborů potřebných pro nahrání (html a css, ostatní nejsou potřeba)
-  1. Klikněte na **sheet_drd2.html**, na otevřené stránce klikněte na tlačítko **Raw** vpravo (nad začátkem kódu) a na nově otevřené stránce klikněte pravým tlačítkem a zvolte **Uložit jako** a uložte do svého počítače
-  2. Naprosto stejný postup pro **sheet_drd2.css**
+    1. Klikněte na **sheet_drd2.html**, na otevřené stránce klikněte na tlačítko **Raw** vpravo (nad začátkem kódu) a na nově otevřené stránce klikněte pravým tlačítkem a zvolte **Uložit jako** a uložte do svého počítače
+    2. Naprosto stejný postup pro **sheet_drd2.css**
 ### Pokud hru teprve vytváříte ###
 2. Při tvorbě hry pod polem Name & Tags/Název hry zvolte z nabídky **Choose a character sheet** volbu Custom (česky možná Vlastní) a hru vytvořte
 3. Budete přesměrováni na stránku s vytvořenou hrou, případně si stránku otevřete (stránka, než kliknete na Launch game/Začít hru)
