@@ -1,6 +1,9 @@
 ﻿# Roll20-DRDII-character-sheet
 Deník postavy pro hru Dračí Doupě II, pro podrobnější informace o hře viz https://www.drd2.cz/
 
+Tímto bych vás chtěl všechny pozvat do naší Putyky na Discordu určenou pro komunitu kolem Dračího Doupěte 2 (link https://discord.gg/2d8uzJNx37), kde nápad na vytvoření deníku vzniknul.
+V jakémkoli případě směle váhejte kontaktovat na Discordu uživatele Sami#7166, nejlépe na serveru výše zmíněném (náš pan výčepní je fajn chlapík)
+
 Postup stažení a vložení do hry:
 
 1. Stažení souborů potřebných pro nahrání (html a css, ostatní nejsou potřeba)
@@ -18,7 +21,3 @@ Postup stažení a vložení do hry:
 
 ### Pokud máte již hru vytvořenou ###
 V krocích výše vynechejte bod 2 - tedy stáhněte soubory a rovnou běžte na stránku se svou hrou a v nastavení nahrajte deník.
-
-V případě nouze směle váhejte kontaktovat na Discordu uživatele Sami#7166, nejlépe na serveru níže zmíněném.
-
-Tímto bych vás chtěl všechny pozvat do naší Putyky na Discordu určenou pro komunitu kolem Dračího Doupěte 2 (link https://discord.gg/2d8uzJNx37), kde nápad na vytvoření deníku vzniknul.
