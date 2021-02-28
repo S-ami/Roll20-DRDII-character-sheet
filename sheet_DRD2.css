@@ -6,34 +6,24 @@
     background-size: 904px 1269px;
     width: 904px;
     height: 1250px;
-    background: url("https://raw.githubusercontent.com/samik027/Roll20-DRDII-character-sheet/main/drd2_pozadi.png") no-repeat;
+    background: url("https://raw.githubusercontent.com/samik027/Roll20-DRDII-character-sheet/actionbar/background.png") no-repeat;
 }
 
-.sheet-character-stats {
-    display:grid;
-}
-
-.sheet-character-stats,
+.sheet-character,
 .sheet-texts,
 .sheet-companions   {
+    display: none;
     grid-template-columns: 1fr 1fr;
+    min-height: 0px;
+    min-width: 0px;
     grid-column-gap: 2em;
     grid-row-gap: 1em;
+    grid-auto-rows: min-content;
     padding-top: 10px;
     width: 92%;
     padding-left: 20px;
     padding-right: 20px;
-}
-
-.sheet-texts, .sheet-companions, .sheet-character {
-    display: none;
-}
-
-
-.sheet-character {
-    flex-direction: column;
-    justify-content: space-between;
-    height: 93%;
+    height: 88%;
 }
 
 .sheet-actionbar {
@@ -46,6 +36,7 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
+    width: 95%;
 }
 
 input {
@@ -184,11 +175,8 @@ textarea {
     background-color: #ebebeb;
 }
 
-
-.sheet-tabstoggle[value="texts"] ~ div.sheet-texts
+.sheet-tabstoggle[value="character"] ~ div.sheet-character,
+.sheet-tabstoggle[value="texts"] ~ div.sheet-texts,
 .sheet-tabstoggle[value="companions"] ~ div.sheet-companions {
     display: grid;
-}
-.sheet-tabstoggle[value="character"] ~ div.sheet-character {
-    display: flex;
 }
