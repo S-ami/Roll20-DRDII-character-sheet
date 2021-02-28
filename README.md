@@ -17,7 +17,7 @@ Postup stažení a vložení do hry:
 9. Když nyní vytvoříte v **Journal/Žurnálu** charakter (dejte mu při vytváření práva na editaci svého deníku) a uložíte jej a pak si ho otevřete, v záložce Character sheet bude náš nový krásný deník (toto platí pro každý charakter, který vytvoříte)
 
 ### Pokud máte již hru vytvořenou ###
-V krocích výše pokračujte od bodu 3
+V krocích výše vynechejte bod 2 - tedy stáhněte soubory a rovnou běžte na stránku se svou hrou a v nastavení nahrajte deník.
 
 V případě nouze směle váhejte kontaktovat na Discordu uživatele Sami#7166, nejlépe na serveru níže zmíněném.
 
