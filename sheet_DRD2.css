@@ -6,7 +6,7 @@
     background-size: 904px 1269px;
     width: 904px;
     height: 1250px;
-    background: url("https://raw.githubusercontent.com/samik027/Roll20-DRDII-character-sheet/main/drd2_pozadi.png") no-repeat;
+    background: url("https://raw.githubusercontent.com/samik027/Roll20-DRDII-character-sheet/actionbar/background.png") no-repeat;
 }
 
 .sheet-character,
@@ -14,12 +14,29 @@
 .sheet-companions   {
     display: none;
     grid-template-columns: 1fr 1fr;
+    min-height: 0px;
+    min-width: 0px;
     grid-column-gap: 2em;
     grid-row-gap: 1em;
+    grid-auto-rows: min-content;
     padding-top: 10px;
     width: 92%;
     padding-left: 20px;
     padding-right: 20px;
+    height: 88%;
+}
+
+.sheet-actionbar {
+    width: 92%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.sheet-actionbar img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
 }
 
 input {
@@ -157,7 +174,6 @@ textarea {
 .sheet-custom-butt:hover {
     background-color: #ebebeb;
 }
-
 
 .sheet-tabstoggle[value="character"] ~ div.sheet-character,
 .sheet-tabstoggle[value="texts"] ~ div.sheet-texts,

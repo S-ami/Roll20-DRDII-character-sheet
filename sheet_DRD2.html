@@ -1,6 +1,3 @@
-<html>
-<body>
-
 <div>
     <button type="action" name="act_character" >Postava</button>
     <button type="action" name="act_texts" >Spisy</button>
@@ -113,7 +110,8 @@
         <div>
             <fieldset class="repeating_proffesions">
                 <div>
-                    <input type="text" name="attr_proffesionname"/>
+                    <input type="text" name="attr_proffesionname"/><button name="roll_proffesion" type="roll" value="&{template:default}{{name=Hod na povolání}}{{@{proffesionname}=[[?{Typ|Standard, 2d6|Přesně, 3d6kh2|Pomalu, 3d6kl2}+@{proffesionlevel}]]}}"></button>
+
                 </div>
                 <div>
                     <input type="number" name="attr_proffesionlevel"/>
@@ -158,7 +156,6 @@
             </fieldset>
         </div>
     </div>
-
 </div>
 <div class="sheet-texts">
     <div class="sheet-two-col">
@@ -172,9 +169,13 @@
         <h3>Poznámky</h3>
         <textarea name="attr_notes"></textarea>
     </div>
+
 </div>
 
 <div class="sheet-companions">
+    <div class="sheet-two-col">
+        <h1>Pomocníci</h1>
+    </div>
     <div class="sheet-two-col">
         <fieldset class="repeating_companions">
             <div>
@@ -195,7 +196,9 @@
         </fieldset>
     </div>
 </div>
-
+<div class="sheet-actionbar">
+    <img src="https://raw.githubusercontent.com/samik027/Roll20-DRDII-character-sheet/5eefd9e80275896c8c4743672ddff384212d2b0b/actionbar.svg" />
+</div>
 <script type="text/worker">
     const buttonlist = ["character", "texts", "companions"];
     buttonlist.forEach(button => {
@@ -248,7 +251,3 @@
         });
     });
 </script>
-
-
-</body>
-</html>
