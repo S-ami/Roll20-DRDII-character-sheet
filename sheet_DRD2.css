@@ -41,7 +41,7 @@
 }
 
 .sheet-companion-divider {
-    overflow: visible; /* For IE */
+    overflow: visible; /* IE */
     height: 30px;
     border-style: solid;
     border-color: black;
@@ -49,7 +49,7 @@
     border-radius: 20px;
 }
 
-.sheet-companion-divider:before { /* Not really supposed to work, but does */
+.sheet-companion-divider:before {
     display: block;
     content: "";
     height: 30px;
