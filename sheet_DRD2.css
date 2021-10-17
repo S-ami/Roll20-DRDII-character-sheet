@@ -1,203 +1,246 @@
-@import url('https://fonts.googleapis.com/css?family=Metamorphous&family=Fira+Code&display=swap');
-
+@import url("https://fonts.googleapis.com/css?family=Metamorphous&family=Fira+Code&display=swap");
 .charsheet {
-    font-family: 'Metamorphous', cursive;
-    text-shadow: 0px 0px 6px #CECECE;
-    background-size: 904px 1269px;
-    width: 904px;
-    height: 1250px;
-    background: url("https://raw.githubusercontent.com/samik027/Roll20-DRDII-character-sheet/actionbar/background.png") no-repeat;
+  font-family: "Metamorphous", cursive;
+  text-shadow: 0 0 6px #CECECE;
+  background-size: 904px 1269px;
+  width: 904px;
+  height: 1250px;
+  background: url("https://raw.githubusercontent.com/samik027/Roll20-DRDII-character-sheet/actionbar/background.png") no-repeat;
 }
 
 .sheet-character,
 .sheet-texts,
-.sheet-companions   {
-    display: none;
-    grid-template-columns: 1fr 1fr;
-    min-height: 0px;
-    min-width: 0px;
-    grid-column-gap: 2em;
-    grid-row-gap: 1em;
-    grid-auto-rows: min-content;
-    padding-top: 10px;
-    width: 92%;
-    padding-left: 20px;
-    padding-right: 20px;
-    height: 88%;
-    overflow-y: auto;
+.sheet-companions {
+  display: none;
+  grid-template-columns: 1fr 1fr;
+  min-height: 0;
+  min-width: 0;
+  grid-column-gap: 2em;
+  grid-row-gap: 1em;
+  grid-auto-rows: min-content;
+  padding-top: 10px;
+  width: 92%;
+  padding-left: 20px;
+  padding-right: 20px;
+  height: calc(1250px - 150px);
+  overflow-y: auto;
+}
+
+.sheet-character-basics {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-gap: 1em;
+}
+.sheet-character-basics input {
+  width: 100%;
+}
+.sheet-character-basics label {
+  width: auto;
+  white-space: nowrap;
+}
+
+.sheet-texts {
+  grid-auto-rows: auto;
+}
+.sheet-texts textarea {
+  height: calc(100% - 5rem);
+}
+.sheet-texts-story {
+  margin-top: 1rem;
+  height: 33%;
+}
+.sheet-texts-notes {
+  height: calc(66% - 36px);
+  /* 36px is line height of "Spisy" heading */
 }
 
 .sheet-actionbar {
-    width: 92%;
-    padding-left: 20px;
-    padding-right: 20px;
+  width: 92%;
+  padding-left: 20px;
+  padding-right: 20px;
 }
-
 .sheet-actionbar img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 95%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 95%;
 }
 
 .sheet-companion-divider {
-    overflow: visible; /* IE */
-    height: 30px;
-    border-style: solid;
-    border-color: black;
-    border-width: 1px 0px 0px 0px;
-    border-radius: 20px;
+  overflow: visible;
+  /* IE */
+  height: 30px;
+  border-style: solid;
+  border-color: black;
+  border-top-width: 1px;
+  border-radius: 20px;
 }
-
 .sheet-companion-divider:before {
-    display: block;
-    content: "";
-    height: 30px;
-    border-style: solid;
-    border-color: black;
-    border-width: 0 0 1px 0;
-    margin-top: -31px;
-    border-radius: 20px;
+  display: block;
+  content: "";
+  height: 30px;
+  border-style: solid;
+  border-color: black;
+  border-width: 0 0 1px 0;
+  margin-top: -31px;
+  border-radius: 20px;
 }
 
 input {
-    border: none;
-    border-bottom: 1px dotted black;
-    outline: none;
+  border: none;
+  border-bottom: 1px dotted black;
+  outline: none;
 }
 
 textarea {
-    resize: none;
+  resize: none;
 }
 
 .sheet-resourses {
-    display: grid;
-    grid-template-columns: 50px 1fr;
-    justify-items: start;
-    grid-row-gap: 5px;
-    margin-top: 10px;
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  justify-items: start;
+  grid-row-gap: 5px;
+  margin-top: 10px;
 }
 
 .sheet-scars {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-row-gap: 5px;
-    margin-top: 10px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-row-gap: 5px;
+  margin-top: 10px;
 }
 
 .sheet-threat-benefit {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    justify-items: start;
-    grid-row-gap: 5px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  justify-items: start;
+  grid-row-gap: 5px;
 }
 
 .sheet-race-proffesion {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-column-gap: 1em;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-column-gap: 1em;
 }
-
 .sheet-race-proffesion input {
-    width: 90%;
+  width: 90%;
 }
 
 .sheet-currency {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .sheet-currency input {
-    width: 65px;
+  width: 65px;
 }
 
 .sheet-resourse-name {
-    justify-self: start;
+  justify-self: start;
 }
 
 .sheet-full-width {
-    width: 100%;
+  width: 100%;
 }
 
 .sheet-two-col {
-    grid-column: 1/3;
+  grid-column: 1/3;
 }
+
 /* repeating sections */
 .repcontainer > .repitem {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
 }
 
-.repcontainer[data-groupname="repeating_companions"] > .repitem {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 2em;
+.repcontainer[data-groupname=repeating_companions] > .repitem {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 2rem;
+  grid-row-gap: 1rem;
+}
+.repcontainer[data-groupname=repeating_companions] > .repitem textarea {
+  height: 80px;
+  resize: both;
+}
+.repcontainer[data-groupname=repeating_companions] > .repitem label {
+  width: auto;
+}
+.repcontainer[data-groupname=repeating_companions] > .repitem input[type=text] {
+  width: 100%;
 }
 
-.repcontainer[data-groupname="repeating_companions"] > .repitem textarea {
-    height: 80px;
-    resize: both;
+.repcontainer[data-groupname=repeating_companions] > .repitem textarea {
+  height: 80px;
+  resize: both;
 }
 
 /* repcontrol button styling for repeating sections */
 .repcontrol .btn {
-    visibility: hidden;
+  visibility: hidden;
 }
-
 .repcontrol .btn:before {
-    visibility: visible;
-    font-family: pictos;
-    height: 24px;
-    width: 24px;
-    font-size: 20px;
-    border-radius: 50%;
-    padding: 4px;
-    display: inline-block;
-    line-height: 22px;
+  visibility: visible;
+  font-family: pictos;
+  height: 24px;
+  width: 24px;
+  font-size: 20px;
+  border-radius: 50%;
+  padding: 4px;
+  display: inline-block;
+  line-height: 22px;
 }
-
 .repcontrol .btn:hover:before {
-    background-color: #c04631;
-    color: gold;
+  background-color: #c04631;
+  color: gold;
 }
-
 .repcontrol .repcontrol_add:before {
-    content: '&';
-    background-color: #a2422d;
+  content: "&";
+  background-color: #a2422d;
 }
-
 .repcontrol .repcontrol_edit:before {
-    content: 'p';
-    background-color: #a2422d;
+  content: "p";
+  background-color: #a2422d;
 }
 
 .editmode ~ .repcontrol .repcontrol_edit:before {
-    content: '3';
+  content: "3";
 }
 
 /* buttons */
 .sheet-custom-butt {
-    background-color: black;
-    font-family: 'Fira Code', monospace;
-    font-size: 15px;
-    width: 20px;
-    height: 20px;
-    text-align: center;
-    background-color: white;
-    border: 1px solid #7c7c7c;
-    border-radius: 0;
-    outline: 0;
-    padding: 0;
-    margin: 0;
-    vertical-align: top;
+  font-family: "Fira Code", monospace;
+  font-size: 15px;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  background-color: white;
+  border: 1px solid #7c7c7c;
+  border-radius: 0;
+  outline: 0;
+  padding: 0;
+  margin: 0;
+  vertical-align: top;
 }
-
 .sheet-custom-butt:hover {
-    background-color: #ebebeb;
+  background-color: #ebebeb;
 }
 
-.sheet-tabstoggle[value="character"] ~ div.sheet-character,
-.sheet-tabstoggle[value="texts"] ~ div.sheet-texts,
-.sheet-tabstoggle[value="companions"] ~ div.sheet-companions {
-    display: grid;
+.sheet-tabstoggle[value=character] ~ div.sheet-character,
+.sheet-tabstoggle[value=texts] ~ div.sheet-texts,
+.sheet-tabstoggle[value=companions] ~ div.sheet-companions {
+  display: grid;
 }
+
+/* UTILS */
+.sheet-flex-row {
+  display: flex;
+}
+
+.sheet-flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+/*# sourceMappingURL=sheet_DRD2.css.map */

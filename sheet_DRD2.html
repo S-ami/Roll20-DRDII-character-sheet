@@ -8,13 +8,10 @@
     <div>
         <h1>Deník postavy</h1>
     </div>
-    <div>
-<!--        <h1>&lt; LOGO?? TODO &gt;</h1>-->
-    </div>
-    <div class="sheet-two-col">
-        <label>Jméno:&nbsp;<input type="text" name="attr_charname" /></label>
-        <label>Rasová zvláštní schopnost:&nbsp;<input type="text" name="attr_race_ability" /></label>
-        <label>Povahový rys:&nbsp;<input type="text" name="attr_personality_trait" /></label>
+    <div class="sheet-two-col character-basics flex-column">
+        <div class="sheet-basics-child flex-row"><label>Jméno:&nbsp;</label><input type="text" name="attr_charname" /></div>
+        <div class="sheet-basics-child flex-row"><label>Rasová zvláštní schopnost:&nbsp;</label><input type="text" name="attr_race_ability" /></div>
+        <div class="sheet-basics-child flex-row"><label>Povahový rys:&nbsp;</label><input type="text" name="attr_personality_trait" /></div>
     </div>
     <div>
         <div class="sheet-threat-benefit">
@@ -28,7 +25,7 @@
                 <h3>Vlastnosti</h3>
             </div>
             <div class="sheet-resourse-name">
-                Tělo
+                Tělo:
             </div>
             <div>
                 <button type="action" name="act_resoursebody1" class="custom-butt"><span name='attr_resoursebody1'></span></button>
@@ -110,7 +107,8 @@
         <div>
             <fieldset class="repeating_proffesions">
                 <div>
-                    <input type="text" name="attr_proffesionname"/><button name="roll_proffesion" type="roll" value="&{template:default}{{name=Hod na povolání}}{{@{proffesionname}=[[?{Typ|Standard, 2d6|Přesně, 3d6kh2|Pomalu, 3d6kl2}+@{proffesionlevel}]]}}"></button>
+                    <input type="text" name="attr_proffesionname"/>
+                    <button name="roll_proffesion" type="roll" value="&{template:default}{{name=Hod na povolání}}{{@{proffesionname}=[[?{Typ|Standard, 2d6|Přesně, 3d6kh2|Nepřesně, 3d6kl2}+@{proffesionlevel}]]}}"></button>
                 </div>
                 <div>
                     <input type="number" name="attr_proffesionlevel"/>
@@ -132,13 +130,13 @@
     </div>
     <div class="sheet-currency">
         <div>
+            <label>Dukáty:&nbsp;<input type="text" name="attr_dukaty" /></label>
+        </div>
+        <div>
             <label>Groše:&nbsp;<input type="text" name="attr_grose" /></label>
         </div>
         <div>
             <label>Haléře:&nbsp;<input type="text" name="attr_halere" /></label>
-        </div>
-        <div>
-            <label>Dukáty:&nbsp;<input type="text" name="attr_dukaty" /></label>
         </div>
     </div>
     <div>
@@ -147,7 +145,7 @@
     <div>
          <label>Volné zkušenosti:&nbsp;<input type="text" name="attr_free_experience" /></label>
     </div>
-    <div>
+    <div class="sheet-two-col">
         <h4>Zvláštní schopnosti</h4>
         <div>
             <fieldset class="repeating_specialabilities">
@@ -160,14 +158,14 @@
 <div class="sheet-texts">
     <div class="sheet-two-col">
         <h1>Spisy</h1>
-    </div>
-    <div class="sheet-two-col">
-        <h3>Příběh hrdiny</h3>
-        <textarea name="attr_story"></textarea>
-    </div>
-    <div class="sheet-two-col">
-        <h3>Poznámky</h3>
-        <textarea name="attr_notes"></textarea>
+        <div class="sheet-texts-notes">
+            <h3>Příběhové poznámky</h3>
+            <textarea name="attr_notes"></textarea>
+        </div>
+        <div class="sheet-texts-story">
+            <h3>Příběh hrdiny</h3>
+            <textarea name="attr_story"></textarea>
+        </div>
     </div>
 </div>
 
@@ -177,11 +175,23 @@
     </div>
     <div class="sheet-two-col">
         <fieldset class="repeating_companions">
-            <div>
-                <label>Jméno:&nbsp;<input type="text" name="attr_compname"/></label>
+            <div class="sheet-flex-row">
+                <label>Jméno:</label>&nbsp;<input type="text" name="attr_compname"/>
             </div>
             <div>
                 <label>Sudba:&nbsp;<input type="number" name="attr_compresources"/></label>
+            </div>
+            <div>
+                <label>Ohrožení:&nbsp;<input type="number" name="attr_compthreat"/></label>
+            </div>
+            <div>
+                <label>Pouto:
+                    <button type="action" name="aaa" class="custom-butt"><span name='aaa'></span></button>
+                    <button type="action" name="bbb" class="custom-butt"><span name='bbb'></span></button>
+                    <button type="action" name="ccc" class="custom-butt"><span name='ccc'></span></button>
+                    <button type="action" name="ddd" class="custom-butt"><span name='ddd'></span></button>
+                    <button type="action" name="eee" class="custom-butt"><span name='eee'></span></button>
+                </label>
             </div>
             <div>
                 <label>Charakteristika:&nbsp;<textarea name="attr_comprcharacteristic"></textarea></label>
@@ -219,10 +229,10 @@
         on(`clicked:${button}`, function () {
             getAttrs([button], function (v) {
                 let val = Object.values(v)[0];
-                let newVal = "X";
-                if (val === 'X') {
-                    newVal = '—';
-                } else if (val === '—') {
+                let newVal = "/";
+                if (val === '/') {
+                    newVal = 'X';
+                } else if (val === 'X') {
                     newVal = "|";
                 } else if (val === '|') {
                     newVal = " ";
