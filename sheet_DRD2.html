@@ -1,83 +1,69 @@
 <div>
     <button type="action" name="act_character" >Postava</button>
+    <button type="action" name="act_special-abilities" >Schopnosti</button>
     <button type="action" name="act_texts" >Spisy</button>
     <button type="action" name="act_companions" >Pomocníci</button>
 </div>
-<input type='hidden' class='sheet-tabstoggle' name='attr_sheetTab' value='character' />
-<div class="sheet-character">
+<input type='hidden' class='tabstoggle' name='attr_sheetTab' value='character' />
+<div class="character">
     <div>
         <h1>Deník postavy</h1>
     </div>
-    <div class="sheet-two-col character-basics flex-column">
-        <div class="sheet-basics-child flex-row"><label>Jméno:&nbsp;</label><input type="text" name="attr_charname" /></div>
-        <div class="sheet-basics-child flex-row"><label>Rasová zvláštní schopnost:&nbsp;</label><input type="text" name="attr_race_ability" /></div>
-        <div class="sheet-basics-child flex-row"><label>Povahový rys:&nbsp;</label><input type="text" name="attr_personality_trait" /></div>
+    <div class="two-col character-basics flex-column">
+        <div class="basics-child flex-row"><label>Jméno:&nbsp;</label><input type="text" name="attr_charname" /></div>
+        <div class="basics-child flex-row"><label>Rasová zvláštní schopnost:&nbsp;</label><input type="text" name="attr_race_ability" /></div>
+        <div class="basics-child flex-row"><label>Povahový rys:&nbsp;</label><input type="text" name="attr_personality_trait" /></div>
     </div>
     <div>
-        <div class="sheet-threat-benefit">
+        <div class="threat-benefit">
             <label>Ohrožení:&nbsp;</label>
             <input type="number" name="attr_threat" />
             <label>Výhoda:&nbsp;</label>
             <input type="number" name="attr_benefit" />
         </div>
-        <div class="sheet-resourses">
-            <div class="sheet-two-col">
-                <h3>Vlastnosti</h3>
-            </div>
-            <div class="sheet-resourse-name">
-                Tělo:
-            </div>
-            <div>
-                <button type="action" name="act_resoursebody1" class="custom-butt"><span name='attr_resoursebody1'></span></button>
-                <button type="action" name="act_resoursebody2" class="custom-butt"><span name='attr_resoursebody2'></span></button>
-                <button type="action" name="act_resoursebody3" class="custom-butt"><span name='attr_resoursebody3'></span></button>
-                <button type="action" name="act_resoursebody4" class="custom-butt"><span name='attr_resoursebody4'></span></button>
-                <button type="action" name="act_resoursebody5" class="custom-butt"><span name='attr_resoursebody5'></span></button>
-                <button type="action" name="act_resoursebody6" class="custom-butt"><span name='attr_resoursebody6'></span></button>
-                <button type="action" name="act_resoursebody7" class="custom-butt"><span name='attr_resoursebody7'></span></button>
-                <button type="action" name="act_resoursebody8" class="custom-butt"><span name='attr_resoursebody8'></span></button>
-                <button type="action" name="act_resoursebody9" class="custom-butt"><span name='attr_resoursebody9'></span></button>
-                <button type="action" name="act_resoursebody10" class="custom-butt"><span name='attr_resoursebody10'></span></button>
-            </div>
-            <div class="sheet-resourse-name">
-                Duše:
-            </div>
-            <div>
-                <button type="action" name="act_resoursespirit1" class="custom-butt"><span name='attr_resoursespirit1'></span></button>
-                <button type="action" name="act_resoursespirit2" class="custom-butt"><span name='attr_resoursespirit2'></span></button>
-                <button type="action" name="act_resoursespirit3" class="custom-butt"><span name='attr_resoursespirit3'></span></button>
-                <button type="action" name="act_resoursespirit4" class="custom-butt"><span name='attr_resoursespirit4'></span></button>
-                <button type="action" name="act_resoursespirit5" class="custom-butt"><span name='attr_resoursespirit5'></span></button>
-                <button type="action" name="act_resoursespirit6" class="custom-butt"><span name='attr_resoursespirit6'></span></button>
-                <button type="action" name="act_resoursespirit7" class="custom-butt"><span name='attr_resoursespirit7'></span></button>
-                <button type="action" name="act_resoursespirit8" class="custom-butt"><span name='attr_resoursespirit8'></span></button>
-                <button type="action" name="act_resoursespirit9" class="custom-butt"><span name='attr_resoursespirit9'></span></button>
-                <button type="action" name="act_resoursespirit10" class="custom-butt"><span name='attr_resoursespirit10'></span></button>
-            </div>
-            <div class="sheet-resourse-name">
-                Vliv:
-            </div>
-            <div>
-                <button type="action" name="act_resourseinfluence1" class="custom-butt"><span name='attr_resourseinfluence1'></span></button>
-                <button type="action" name="act_resourseinfluence2" class="custom-butt"><span name='attr_resourseinfluence2'></span></button>
-                <button type="action" name="act_resourseinfluence3" class="custom-butt"><span name='attr_resourseinfluence3'></span></button>
-                <button type="action" name="act_resourseinfluence4" class="custom-butt"><span name='attr_resourseinfluence4'></span></button>
-                <button type="action" name="act_resourseinfluence5" class="custom-butt"><span name='attr_resourseinfluence5'></span></button>
-                <button type="action" name="act_resourseinfluence6" class="custom-butt"><span name='attr_resourseinfluence6'></span></button>
-                <button type="action" name="act_resourseinfluence7" class="custom-butt"><span name='attr_resourseinfluence7'></span></button>
-                <button type="action" name="act_resourseinfluence8" class="custom-butt"><span name='attr_resourseinfluence8'></span></button>
-                <button type="action" name="act_resourseinfluence9" class="custom-butt"><span name='attr_resourseinfluence9'></span></button>
-                <button type="action" name="act_resourseinfluence10" class="custom-butt"><span name='attr_resourseinfluence10'></span></button>
+        <div class="resources">
+            <div class="two-col">
+                <h3>Zdatnosti</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <td></td>
+                            <td>Nyní</td>
+                            <td>Zjizvené</td>
+                            <td>Maximum</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Tělo</td>
+                            <td><input type="number" name="attr_resource-body"/></td>
+                            <td><input type="number" name="attr_resource-body-scars"/></td>
+                            <td><input type="number" name="attr_resource-body_max"/></td>
+                        </tr>
+                        <tr>
+                            <td>Duše</td>
+                            <td><input type="number" name="attr_resource-spirit"/></td>
+                            <td><input type="number" name="attr_resource-spirit-scars"/></td>
+                            <td><input type="number" name="attr_resource-spirit_max"/></td>
+                        </tr>
+                        <tr>
+                            <td>Vliv</td>
+                            <td><input type="number" name="attr_resource-influence"/></td>
+                            <td><input type="number" name="attr_resource-influence-scars"/></td>
+                            <td><input type="number" name="attr_resource-influence_max"/></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
-        <div class="sheet-scars">
+        <div class="scars">
             <div>
                 <h3>Jizva</h3>
             </div>
             <div>
                 <h3>Úroveň</h3>
             </div>
-            <div class="sheet-two-col">
+            <div class="two-col">
                 <fieldset class="repeating_scars">
                     <div>
                         <input type="text" name="attr_scarname"/>
@@ -90,12 +76,12 @@
         </div>
     </div>
     <div>
-        <div class="sheet-race-proffesion">
-            <div class="sheet-two-col">
+        <div class="race-proffesion">
+            <div class="two-col">
                 <h3>Rasa (kultura)</h3>
             </div>
-            <div class="sheet-two-col" style="margin-bottom: 15px">
-                <input type="text" name="attr_source_race" class="sheet-full-width" />
+            <div class="two-col" style="margin-bottom: 15px">
+                <input type="text" name="attr_source_race" class="full-width" />
             </div>
             <div>
                 <h3>Povolání</h3>
@@ -125,57 +111,73 @@
         <h3>Zbraně a zbroje</h3>
         <textarea name="attr_weapons_and_armour"></textarea>
     </div>
-    <div>
-        <label>Suroviny:&nbsp;<input type="text" name="attr_materials" /></label>
-    </div>
-    <div class="sheet-currency">
-        <div>
-            <label>Dukáty:&nbsp;<input type="text" name="attr_dukaty" /></label>
+<!--    <div class="two-col state-info">-->
+        <div class="flex-row">
+            <span class="custom-label width-100px">Suroviny:</span><input type="text" name="attr_materials" />
         </div>
-        <div>
-            <label>Groše:&nbsp;<input type="text" name="attr_grose" /></label>
+        <div class="currency">
+            <div class="flex-row">
+                <span class="custom-label">Dukáty:</span><input type="text" name="attr_dukaty" />
+            </div>
+            <div class="flex-row">
+                <span class="custom-label">Groše:</span><input type="text" name="attr_grose" />
+            </div>
+            <div class="flex-row">
+                <span class="custom-label">Haléře:</span><input type="text" name="attr_halere" />
+            </div>
         </div>
-        <div>
-            <label>Haléře:&nbsp;<input type="text" name="attr_halere" /></label>
+        <div class="flex-row">
+             <span class="custom-label width-100px">Úroveň:</span><input type="text" name="attr_level" />
         </div>
-    </div>
-    <div>
-         <label>Úroveň:&nbsp;<input type="text" name="attr_level" /></label>
-    </div>
-    <div>
-         <label>Volné zkušenosti:&nbsp;<input type="text" name="attr_free_experience" /></label>
-    </div>
-    <div class="sheet-two-col">
-        <h4>Zvláštní schopnosti</h4>
-        <div>
-            <fieldset class="repeating_specialabilities">
-                <input type="text" name="attr_specialability" class="sheet-full-width sheet-two-col" />
-            </fieldset>
+        <div class="flex-row">
+             <span class="custom-label">Volné zkušenosti:</span><input type="text" name="attr_free_experience" />
         </div>
+        <div class="flex-column rit-item">
+            <h3>Rituální předmět:</h3>
+            <div>
+                <div class="flex-row rit-item-charge">
+                    <span class="custom-label">Nabití</span>
+                    <input type="number" name="attr_rit-item" />
+                    <span class="rit-item-charge__delimiter">/</span>
+                    <input type="number" name="attr_rit-item_max" />
+                </div>
+            </div>
+            <span class="custom-label">Popis</span>
+            <textarea rows="4" name="attr_rit-item-desc"></textarea>
+        </div>
+<!--    </div>-->
+</div>
+
+<div class="special-abilities">
+    <h1>Zvláštní schopnosti</h1>
+    <div class="two-col">
+        <fieldset class="repeating_specialabilities">
+            <input type="text" name="attr_specialability" class="sheet-full-width sheet-two-col" />
+        </fieldset>
     </div>
 </div>
 
-<div class="sheet-texts">
-    <div class="sheet-two-col">
+<div class="texts">
+    <div class="two-col">
         <h1>Spisy</h1>
-        <div class="sheet-texts-notes">
+        <div class="texts-notes">
             <h3>Příběhové poznámky</h3>
             <textarea name="attr_notes"></textarea>
         </div>
-        <div class="sheet-texts-story">
+        <div class="texts-story">
             <h3>Příběh hrdiny</h3>
             <textarea name="attr_story"></textarea>
         </div>
     </div>
 </div>
 
-<div class="sheet-companions">
-    <div class="sheet-two-col">
+<div class="companions">
+    <div class="two-col">
         <h1>Pomocníci</h1>
     </div>
-    <div class="sheet-two-col">
+    <div class="two-col">
         <fieldset class="repeating_companions">
-            <div class="sheet-flex-row">
+            <div class="flex-row">
                 <label>Jméno:</label>&nbsp;<input type="text" name="attr_compname"/>
             </div>
             <div>
@@ -199,19 +201,19 @@
             <div>
                 <label>Zvláštní schopnosti<textarea name="attr_comprspecialabilities"></textarea></label>
             </div>
-            <div class="sheet-two-col">
+            <div class="two-col">
                 <label>Poznámky<textarea name="attr_comprnotes"></textarea></label>
-                <hr class="sheet-companion-divider">
+                <hr class="companion-divider">
             </div>
         </fieldset>
     </div>
 </div>
-<div class="sheet-actionbar">
+<div class="actionbar">
     <img src="https://raw.githubusercontent.com/samik027/Roll20-DRDII-character-sheet/5eefd9e80275896c8c4743672ddff384212d2b0b/actionbar.svg" />
 </div>
 
 <script type="text/worker">
-    const buttonlist = ["character", "texts", "companions"];
+    const buttonlist = ["character", "texts", "companions", "special-abilities"];
     buttonlist.forEach(button => {
         on(`clicked:${button}`, function () {
             setAttrs({
@@ -219,13 +221,13 @@
             });
         });
     });
-    let resoursebtns = [];
+    let resourcebtns = [];
     for (let i = 0; i < 15; i++) {
-        resoursebtns.push('resoursebody' + i);
-        resoursebtns.push('resoursespirit' + i);
-        resoursebtns.push('resourseinfluence' + i);
+        resourcebtns.push('resourcebody' + i);
+        resourcebtns.push('resourcespirit' + i);
+        resourcebtns.push('resourceinfluence' + i);
     }
-    resoursebtns.forEach(button => {
+    resourcebtns.forEach(button => {
         on(`clicked:${button}`, function () {
             getAttrs([button], function (v) {
                 let val = Object.values(v)[0];

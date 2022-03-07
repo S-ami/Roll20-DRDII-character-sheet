@@ -5,14 +5,15 @@ $sheet-height: 1250px;
 .charsheet {
     font-family: 'Metamorphous', cursive;
     text-shadow: 0 0 6px #CECECE;
-    background-size: 904px 1269px;
-    width: 904px;
+    width: 850px;
     height: $sheet-height;
     background: url("https://raw.githubusercontent.com/samik027/Roll20-DRDII-character-sheet/actionbar/background.png") no-repeat;
+    background-size: 850px 1269px;
 }
 
 
 .sheet-character,
+.sheet-special-abilities,
 .sheet-texts,
 .sheet-companions   {
     display: none;
@@ -22,34 +23,92 @@ $sheet-height: 1250px;
     grid-column-gap: 2em;
     grid-row-gap: 1em;
     grid-auto-rows: min-content;
-    padding-top: 10px;
     width: 92%;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 10px 20px 0;
     height: calc(#{$sheet-height} - 150px);
     overflow-y: auto;
 }
 
 
 
+.sheet-character {
 
-.sheet-character-basics {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    grid-gap: 1em;
-    input {
-        width: 100%;
+    .sheet-character-basics {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        grid-gap: 1em;
+        input {
+            width: 100%;
+        }
+
+        label {
+            width: auto;
+            white-space: nowrap;
+        }
+
     }
 
-    label {
-        width: auto;
-        white-space: nowrap;
+
+    .sheet-resources {
+        display: grid;
+        grid-template-columns: 50px 1fr;
+        justify-items: start;
+        grid-row-gap: 5px;
+        margin-top: 10px;
+
+        input {
+            width: 60px;
+        }
+
+        table {
+            table-layout: fixed;
+
+            td {
+                padding-top: 1rem;
+
+                width: 60px;
+
+                &:not(&:first-child) {
+                    padding-right: 40px;
+                    text-align: center;
+                }
+            }
+
+        }
+    }
+
+    .sheet-rit-item {
+        margin-top: 2rem;
+
+        input {
+            width: 40%;
+        }
+
+        .sheet-custom-label {
+            margin-right: 1rem;
+        }
+
+        &-charge {
+            margin: 2rem 0;
+
+            &__delimiter {
+                margin: 0 1rem;
+                font-size: 22px;
+            }
+        }
+
+        textarea {
+            height: unset;
+        }
+
     }
 }
 
 
+
 .sheet-texts {
     grid-auto-rows: auto;
+
     textarea {
         height: calc(100% - 5rem);
     }
@@ -63,7 +122,6 @@ $sheet-height: 1250px;
     &-notes {
         height: calc(66% - 36px); /* 36px is line height of "Spisy" heading */
     }
-
 }
 
 
@@ -71,6 +129,7 @@ $sheet-height: 1250px;
     width: 92%;
     padding-left: 20px;
     padding-right: 20px;
+
     img {
         display: block;
         margin-left: auto;
@@ -113,15 +172,6 @@ textarea {
 }
 
 
-.sheet-resourses {
-    display: grid;
-    grid-template-columns: 50px 1fr;
-    justify-items: start;
-    grid-row-gap: 5px;
-    margin-top: 10px;
-}
-
-
 .sheet-scars {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -161,18 +211,11 @@ textarea {
 }
 
 
-.sheet-resourse-name {
+.sheet-resource-name {
     justify-self: start;
 }
 
-.sheet-full-width {
-    width: 100%;
-}
 
-
-.sheet-two-col {
-    grid-column: 1/3;
-}
 
 /* repeating sections */
 .repcontainer > .repitem {
@@ -272,6 +315,7 @@ textarea {
 
 
 .sheet-tabstoggle[value="character"] ~ div.sheet-character,
+.sheet-tabstoggle[value="special-abilities"] ~ div.sheet-special-abilities,
 .sheet-tabstoggle[value="texts"] ~ div.sheet-texts,
 .sheet-tabstoggle[value="companions"] ~ div.sheet-companions {
     display: grid;
@@ -286,4 +330,22 @@ textarea {
 .sheet-flex-column {
     display: flex;
     flex-direction: column;
+}
+
+.sheet-full-width {
+    width: 100%;
+}
+
+.sheet-two-col {
+    grid-column: 1/3;
+}
+
+.sheet-width-100px {
+    width: 100px;
+}
+
+.sheet-custom-label {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 10px;
 }
